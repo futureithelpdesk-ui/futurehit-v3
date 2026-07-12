@@ -12,7 +12,7 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#000",
+        background: "#050505",
         color: "#00ff66",
         display: "flex",
         justifyContent: "center",
@@ -22,20 +22,20 @@ export default function Home() {
     >
       <h1
         style={{
-          fontSize: "60px",
-          fontWeight: "bold",
+          fontSize: "64px",
+          letterSpacing: "5px",
         }}
       >
-        FUTUREHIT
+        FUTURE
       </h1>
 
       <p
         style={{
-          marginTop: "20px",
-          fontSize: "22px",
+          marginTop: "15px",
+          color: "#aaa",
         }}
       >
-        Welcome to FutureHit V3 🚀
+        Welcome to FutureHit V3
       </p>
     </main>
   );
