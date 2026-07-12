@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BootLoader from "../components/loading/BootLoader";
 import MatrixRain from "../components/effects/MatrixRain";
+import GlitchText from "../components/effects/GlitchText";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -23,22 +24,15 @@ export default function Home() {
           alignItems: "center",
           flexDirection: "column",
           background: "#000",
-          color: "#00ff66",
+          color: "#fff",
         }}
       >
-        <h1
-          style={{
-            fontSize: "70px",
-            letterSpacing: "8px",
-          }}
-        >
-          FUTURE
-        </h1>
+        <GlitchText text="FUTURE" />
 
         <p
           style={{
-            color: "#aaaaaa",
             marginTop: "20px",
+            color: "#aaa",
             fontSize: "20px",
           }}
         >
