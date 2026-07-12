@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import "./BootLoader.css";
 
-const lines = [
-  "Initializing FutureHit...",
-  "Connecting to secure network...",
-  "Decrypting encrypted files...",
-  "Checking system integrity...",
-  "Access Granted ✔"
+const steps = [
+  "Initializing AI Core...",
+  "Connecting Secure Network...",
+  "Decrypting Future Database...",
+  "Loading Cyber Modules...",
+  "Checking System Integrity...",
+  "Access Granted ✔",
 ];
 
 type BootLoaderProps = {
@@ -15,56 +17,74 @@ type BootLoaderProps = {
 export default function BootLoader({
   onComplete,
 }: BootLoaderProps) {
-  const [current, setCurrent] = useState(0);
+  const [step, setStep] = useState(0);
 
   useEffect(() => {
-    if (current >= lines.length) {
+    if (step >= steps.length) {
       const timer = setTimeout(() => {
         onComplete();
-      }, 800);
+      }, 1200);
 
       return () => clearTimeout(timer);
     }
 
     const timer = setTimeout(() => {
-      setCurrent((value) => value + 1);
+      setStep((value) => value + 1);
     }, 700);
 
     return () => clearTimeout(timer);
-  }, [current, onComplete]);
+  }, [step, onComplete]);
+
+  const progress = Math.min(
+    Math.floor((step / steps.length) * 100),
+    100
+  );
 
   return (
-    <div
-      style={{
-        background: "#000",
-        color: "#00ff66",
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "monospace",
-        fontSize: "20px",
-      }}
-    >
-      <div>
-        {lines.slice(0, current).map((line, index) => (
-          <p key={index}>{line}</p>
-        ))}
+    <div className="boot-screen">
 
-        {current < lines.length && (
-          <p>
-            {lines[current]}
-            <span
-              style={{
-                animation: "blink 1s infinite",
-              }}
-            >
-              █
-            </span>
-          </p>
-        )}
+      <div className="boot-box">
+
+        <h1>FUTURE SECURITY TERMINAL</h1>
+
+        <p className="version">
+          Version 3.0
+        </p>
+
+        <div className="terminal">
+
+          {steps.slice(0, step).map((item, index) => (
+            <p key={index}>
+              &gt; {item}
+            </p>
+          ))}
+
+          {step < steps.length && (
+            <p>
+              &gt; {steps[step]}
+              <span className="cursor">█</span>
+            </p>
+          )}
+
+        </div>
+
+        <div className="progress">
+
+          <div
+            className="progress-fill"
+            style={{
+              width: `${progress}%`,
+            }}
+          />
+
+        </div>
+
+        <p className="percent">
+          {progress}%
+        </p>
+
       </div>
+
     </div>
   );
 }
