@@ -1,0 +1,19 @@
+.glitch {
+  font-size: 72px;
+  font-weight: bold;
+  color: #00ff66;
+  letter-spacing: 8px;
+  position: relative;
+  text-shadow:
+    0 0 10px #00ff66,
+    0 0 30px #00ff66;
+  transition: 0.2s;
+}
+
+.glitch.active {
+  transform: translateX(2px);
+  text-shadow:
+    -3px 0 red,
+     3px 0 cyan,
+     0 0 20px #00ff66;
+}
