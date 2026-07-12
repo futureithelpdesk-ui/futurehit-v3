@@ -1,15 +1,42 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-black text-green-400 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold tracking-widest">
-          FUTUREHIT
-        </h1>
+import { useState } from "react";
+import BootLoader from "../components/loading/BootLoader";
 
-        <p className="mt-4 text-green-500">
-          Initializing Cyber System...
-        </p>
-      </div>
+export default function Home() {
+  const [loaded, setLoaded] = useState(false);
+
+  if (!loaded) {
+    return <BootLoader onComplete={() => setLoaded(true)} />;
+  }
+
+  return (
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#000",
+        color: "#00ff66",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "60px",
+          fontWeight: "bold",
+        }}
+      >
+        FUTUREHIT
+      </h1>
+
+      <p
+        style={{
+          marginTop: "20px",
+          fontSize: "22px",
+        }}
+      >
+        Welcome to FutureHit V3 🚀
+      </p>
     </main>
   );
 }
