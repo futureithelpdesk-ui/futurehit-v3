@@ -1,13 +1,23 @@
 import { motion } from "framer-motion";
 import "./Hero.css";
+
 import HeroBackground from "./HeroBackground";
+import HeroHUD from "./HeroHUD";
+import HeroTyping from "./HeroTyping";
+import HeroStats from "./HeroStats";
+import HeroScroll from "./HeroScroll";
 
 export default function Hero() {
   return (
     <section className="hero">
 
+      {/* Background */}
       <HeroBackground />
 
+      {/* HUD */}
+      <HeroHUD />
+
+      {/* Main Content */}
       <div className="hero-content">
 
         <motion.p
@@ -36,6 +46,9 @@ export default function Hero() {
           FUTURE
         </motion.h1>
 
+        {/* Typing Animation */}
+        <HeroTyping />
+
         <motion.h2
           initial={{
             opacity: 0,
@@ -44,8 +57,8 @@ export default function Hero() {
             opacity: 1,
           }}
           transition={{
-            delay: .6,
-            duration: .8,
+            delay: 0.6,
+            duration: 0.8,
           }}
           className="hero-subtitle"
         >
@@ -54,35 +67,33 @@ export default function Hero() {
 
         <motion.p
           initial={{
-            opacity:0,
+            opacity: 0,
           }}
           animate={{
-            opacity:1,
+            opacity: 1,
           }}
           transition={{
-            delay:1,
+            delay: 1,
           }}
           className="hero-desc"
         >
-          Digital Intelligence • Cyber Operations •
-          Privacy Protection
+          Digital Intelligence • Cyber Operations • Privacy Protection
         </motion.p>
 
         <motion.div
           initial={{
-            opacity:0,
-            y:30,
+            opacity: 0,
+            y: 30,
           }}
           animate={{
-            opacity:1,
-            y:0,
+            opacity: 1,
+            y: 0,
           }}
           transition={{
-            delay:1.2,
+            delay: 1.2,
           }}
           className="hero-buttons"
         >
-
           <button className="btn-green">
             ENTER SYSTEM
           </button>
@@ -90,10 +101,15 @@ export default function Hero() {
           <button className="btn-outline">
             VIEW OPERATIONS
           </button>
-
         </motion.div>
 
+        {/* Stats */}
+        <HeroStats />
+
       </div>
+
+      {/* Scroll Indicator */}
+      <HeroScroll />
 
     </section>
   );
