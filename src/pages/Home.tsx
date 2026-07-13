@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 import BootLoader from "../components/loading/BootLoader";
+
 import MatrixRain from "../components/effects/MatrixRain";
+import Particles from "../components/effects/Particles";
+
 import Hero from "../components/hero/Hero";
 
 export default function Home() {
@@ -17,12 +20,19 @@ export default function Home() {
   }
 
   return (
-    <main>
-
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#000",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
       <MatrixRain />
 
-      <Hero />
+      <Particles />
 
+      <Hero />
     </main>
   );
 }
