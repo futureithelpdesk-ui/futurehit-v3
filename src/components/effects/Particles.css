@@ -1,0 +1,35 @@
+.particles{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:2;
+}
+
+.particle{
+position:absolute;
+bottom:-20px;
+background:#00ff88;
+border-radius:50%;
+opacity:.5;
+box-shadow:0 0 10px #00ff88;
+animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:.8;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
