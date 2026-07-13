@@ -1,4 +1,5 @@
 import "./Hero.css";
+import "./CyberGrid.css";
 
 export default function GlitchText() {
   return (
