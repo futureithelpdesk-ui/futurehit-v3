@@ -1,21 +1,42 @@
-import "./Hero.css";
+.cyber-grid{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:0;
+}
 
-export default function GlitchText(){
+.grid{
+position:absolute;
+width:250%;
+height:250%;
+left:-75%;
+top:-75%;
 
-return(
+background-image:
+linear-gradient(rgba(0,255,136,.08) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,255,136,.08) 1px,transparent 1px);
 
-<h1
+background-size:60px 60px;
 
-className="glitch"
+transform:perspective(900px) rotateX(82deg);
 
-data-text="FUTURE"
+animation:gridMove 12s linear infinite;
+}
 
->
+.glow{
+filter:blur(3px);
+opacity:.4;
+}
 
-FUTURE
+@keyframes gridMove{
 
-</h1>
+0%{
+transform:perspective(900px) rotateX(82deg) translateY(0);
+}
 
-)
+100%{
+transform:perspective(900px) rotateX(82deg) translateY(60px);
+}
 
 }
