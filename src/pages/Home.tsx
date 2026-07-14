@@ -1,16 +1,30 @@
+import Navbar from "../components/navbar/Navbar";
+
 import Hero from "../components/hero/Hero";
+
 import About from "../components/about/About";
+
 import Skills from "../components/skills/Skills";
+
 import Timeline from "../components/timeline/Timeline";
+
 import Projects from "../components/projects/Projects";
+
 import Contact from "../components/contact/Contact";
+
 import Footer from "../components/footer/Footer";
+
+import ScrollProgress from "../components/effects/ScrollProgress";
 
 export default function Home(){
 
 return(
 
 <>
+
+<ScrollProgress/>
+
+<Navbar/>
 
 <Hero/>
 
