@@ -20,6 +20,10 @@ import MatrixRain from "../components/effects/MatrixRain";
 
 import DigitalClock from "../components/effects/DigitalClock";
 
+import CursorTrail from "../components/effects/CursorTrail";
+
+import SystemStatus from "../components/effects/SystemStatus";
+
 export default function Home(){
 
 return(
@@ -30,9 +34,13 @@ return(
 
 <ScrollProgress/>
 
+<CursorTrail/>
+
 <Navbar/>
 
 <DigitalClock/>
+
+<SystemStatus/>
 
 <Hero/>
 
