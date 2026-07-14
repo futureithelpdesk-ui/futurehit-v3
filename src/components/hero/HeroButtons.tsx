@@ -1,44 +1,25 @@
-import { motion } from "framer-motion";
-import "./Hero.css";
+import "./HeroButtons.css";
 
-export default function HeroButtons() {
+export default function HeroButtons(){
 
-  return (
+return(
 
-    <motion.div
+<div className="hero-buttons">
 
-      className="hero-buttons"
+<button className="btn-primary">
 
-      initial={{
-        opacity:0,
-        y:40
-      }}
+ENTER SYSTEM
 
-      animate={{
-        opacity:1,
-        y:0
-      }}
+</button>
 
-      transition={{
-        delay:1
-      }}
+<button className="btn-secondary">
 
-    >
+VIEW PROJECTS
 
-      <button className="btn-green">
+</button>
 
-        ENTER SYSTEM
+</div>
 
-      </button>
-
-      <button className="btn-outline">
-
-        VIEW OPERATIONS
-
-      </button>
-
-    </motion.div>
-
-  )
+)
 
 }
