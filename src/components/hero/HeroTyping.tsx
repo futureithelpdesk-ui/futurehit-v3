@@ -1,38 +1,41 @@
+import "./HeroTyping.css";
 import { useEffect, useState } from "react";
 
-const words = [
-  "Cyber Intelligence",
-  "Digital Protection",
-  "Black Hat Hacker",
-  "Privacy Protection",
+const texts = [
+  "CYBER SECURITY",
+  "DIGITAL INTELLIGENCE",
+  "PRIVACY PROTECTION",
+  "SYSTEM ANALYSIS",
+  "ETHICAL RESEARCH",
 ];
 
 export default function HeroTyping() {
+
   const [text, setText] = useState("");
 
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
 
-    let i = 0;
+    let char = 0;
 
-    const current = words[index];
+    const word = texts[index];
 
     const timer = setInterval(() => {
 
-      i++;
+      char++;
 
-      setText(current.slice(0, i));
+      setText(word.slice(0, char));
 
-      if (i >= current.length) {
+      if (char >= word.length) {
 
         clearInterval(timer);
 
         setTimeout(() => {
 
-          setIndex((v) => (v + 1) % words.length);
-
           setText("");
+
+          setIndex((p) => (p + 1) % texts.length);
 
         }, 1500);
 
@@ -46,13 +49,13 @@ export default function HeroTyping() {
 
   return (
 
-    <h3 className="typing">
+    <div className="typing">
 
       {text}
 
       <span>|</span>
 
-    </h3>
+    </div>
 
   );
 
