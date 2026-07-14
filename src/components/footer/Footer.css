@@ -1,0 +1,53 @@
+.footer{
+
+padding:80px 20px;
+
+background:#000;
+
+text-align:center;
+
+}
+
+.footer h2{
+
+font-size:70px;
+
+letter-spacing:12px;
+
+color:#00ff88;
+
+margin-bottom:20px;
+
+}
+
+.footer p{
+
+color:#888;
+
+margin-bottom:40px;
+
+letter-spacing:4px;
+
+}
+
+.footer-line{
+
+width:200px;
+
+height:1px;
+
+background:#00ff88;
+
+margin:30px auto;
+
+}
+
+.footer span{
+
+color:#666;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+}
