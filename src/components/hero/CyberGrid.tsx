@@ -1,13 +1,21 @@
-import "./CyberGrid.css";
+import "./GlitchText.css";
 
-export default function CyberGrid() {
-  return (
-    <div className="cyber-grid">
+export default function GlitchText(){
 
-      <div className="grid"></div>
+return(
 
-      <div className="grid glow"></div>
+<h1
 
-    </div>
-  );
+className="future-title"
+
+data-text="FUTURE"
+
+>
+
+FUTURE
+
+</h1>
+
+)
+
 }
