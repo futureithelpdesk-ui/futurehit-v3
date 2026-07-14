@@ -16,15 +16,23 @@ import Footer from "../components/footer/Footer";
 
 import ScrollProgress from "../components/effects/ScrollProgress";
 
+import MatrixRain from "../components/effects/MatrixRain";
+
+import DigitalClock from "../components/effects/DigitalClock";
+
 export default function Home(){
 
 return(
 
 <>
 
+<MatrixRain/>
+
 <ScrollProgress/>
 
 <Navbar/>
+
+<DigitalClock/>
 
 <Hero/>
 
