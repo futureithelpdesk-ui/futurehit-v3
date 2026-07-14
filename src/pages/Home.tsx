@@ -3,25 +3,31 @@ import About from "../components/about/About";
 import Skills from "../components/skills/Skills";
 import Timeline from "../components/timeline/Timeline";
 import Projects from "../components/projects/Projects";
+import Contact from "../components/contact/Contact";
+import Footer from "../components/footer/Footer";
 
-export default function Home() {
+export default function Home(){
 
-  return (
+return(
 
-    <>
+<>
 
-      <Hero />
+<Hero/>
 
-      <About />
+<About/>
 
-      <Skills />
+<Skills/>
 
-      <Timeline />
+<Timeline/>
 
-      <Projects />
+<Projects/>
 
-    </>
+<Contact/>
 
-  );
+<Footer/>
+
+</>
+
+)
 
 }
