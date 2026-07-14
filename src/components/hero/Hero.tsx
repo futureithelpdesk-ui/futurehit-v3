@@ -8,41 +8,52 @@ import HeroScroll from "./HeroScroll";
 import HeroButtons from "./HeroButtons";
 import CyberGrid from "./CyberGrid";
 import GlitchText from "./GlitchText";
+import Terminal from "../terminal/Terminal";
 
 export default function Hero() {
+  return (
+    <section className="hero">
 
-return(
+      <HeroBackground />
 
-<section className="hero">
+      <CyberGrid />
 
-<HeroBackground/>
+      <HeroHUD />
 
-<CyberGrid/>
+      <div className="hero-overlay"></div>
 
-<HeroHUD/>
+      <div className="hero-container">
 
-<div className="hero-content">
+        <div className="hero-left">
 
-<GlitchText/>
+          <GlitchText />
 
-<HeroTyping/>
+          <HeroTyping />
 
-<p className="hero-description">
+          <p className="hero-description">
 
-Digital Intelligence • Privacy Protection • Cyber Operations
+            Advanced Cyber Intelligence Platform built for monitoring,
+            digital investigations, ethical security research and
+            privacy protection.
 
-</p>
+          </p>
 
-<HeroButtons/>
+          <HeroButtons />
 
-<HeroStats/>
+        </div>
 
-</div>
+        <div className="hero-right">
 
-<HeroScroll/>
+          <Terminal />
 
-</section>
+        </div>
 
-)
+      </div>
 
+      <HeroStats />
+
+      <HeroScroll />
+
+    </section>
+  );
 }
