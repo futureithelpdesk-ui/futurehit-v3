@@ -1,0 +1,35 @@
+.cursor-trail{
+
+position:fixed;
+
+width:30px;
+
+height:30px;
+
+border-radius:50%;
+
+border:2px solid #00ff88;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+transition:
+
+left .06s linear,
+
+top .06s linear,
+
+transform .2s;
+
+box-shadow:
+
+0 0 20px #00ff88,
+
+0 0 50px rgba(0,255,136,.5);
+
+z-index:99999;
+
+mix-blend-mode:screen;
+
+}
