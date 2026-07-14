@@ -1,13 +1,25 @@
-import "./Hero.css";
+import "./HeroScroll.css";
 
-export default function HeroScroll() {
-  return (
-    <div className="scroll-indicator">
+export default function HeroScroll(){
 
-      <span></span>
+return(
 
-      <p>SCROLL</p>
+<div className="scroll-box">
 
-    </div>
-  );
+<div className="mouse">
+
+<div className="wheel"></div>
+
+</div>
+
+<p>
+
+SCROLL
+
+</p>
+
+</div>
+
+)
+
 }
